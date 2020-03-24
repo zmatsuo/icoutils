@@ -187,6 +187,7 @@ extract_icons(FILE *in, const char *inname, bool listmode, ExtractNameGen outfil
                         printf(_("--%s --index=%d --width=%d --height=%d --bit-depth=%" PRIu32 " --palette-size=%" PRIu32),
                                 (dir.type == 1 ? "icon" : "cursor"), completed, width, height,
                                 bit_count, palette_count);
+                        printf(" --type=png");
                         if (dir.type == 2)
                             printf(_(" --hotspot-x=%d --hotspot-y=%d"), entries[c].hotspot_x, entries[c].hotspot_y);
                         printf("\n");
@@ -364,6 +365,7 @@ extract_icons(FILE *in, const char *inname, bool listmode, ExtractNameGen outfil
                         printf(_("--%s --index=%d --width=%d --height=%d --bit-depth=%" PRIu32 " --palette-size=%" PRIu32),
                                 (dir.type == 1 ? "icon" : "cursor"), completed, width, height,
                                 bitmap.bit_count, palette_count);
+                        printf(" --type=bmp");
                         if (dir.type == 2)
                             printf(_(" --hotspot-x=%d --hotspot-y=%d"), entries[c].hotspot_x, entries[c].hotspot_y);
                         printf("\n");
